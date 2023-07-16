@@ -1,80 +1,56 @@
-public class Book {
-    private String title;
-    private String author;
+class Book:
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
 
-    public Book(String title, String author) {
-        this.title = title;
-        this.author = author;
-    }
+class BookStack:
+    def __init__(self):
+        self.stack = []
 
-    // Getters and setters for title and author
-}
+    def push(self, book):
+        self.stack.append(book)
 
-public class BookStack {
-    private Book[] stack;
-    private int top;
-    private int capacity;
+    def pop(self):
+        if self.is_empty():
+            return None
+        return self.stack.pop()
 
-    public BookStack(int capacity) {
-        this.capacity = capacity;
-        this.stack = new Book[capacity];
-        this.top = -1;
-    }
+    def is_empty(self):
+        return len(self.stack) == 0
 
-    public boolean isEmpty() {
-        return top == -1;
-    }
+    def size(self):
+        return len(self.stack)
 
-    public boolean isFull() {
-        return top == capacity - 1;
-    }
+    def walk_stack(self):
+        for book in self.stack:
+            print(book.title)
 
-    public void push(Book book) {
-        if (isFull()) {
-            System.out.println("Stack is full. Cannot push book: " + book.getTitle());
-        } else {
-            stack[++top] = book;
-            System.out.println("Pushed book: " + book.getTitle());
-        }
-    }
 
-    public Book pop() {
-        if (isEmpty()) {
-            System.out.println("Stack is empty. Cannot pop a book.");
-            return null;
-        } else {
-            Book poppedBook = stack[top--];
-            System.out.println("Popped book: " + poppedBook.getTitle());
-            return poppedBook;
-        }
-    }
 
-    public Book peek() {
-        if (isEmpty()) {
-            System.out.println("Stack is empty. No book to peek.");
-            return null;
-        } else {
-            return stack[top];
-        }
-    }
+stack = BookStack()
 
-    public static void main(String[] args) {
-        BookStack stack = new BookStack(5);
+# Push 10 books onto the stack
+book1 = Book("Book 1", "Author 1")
+book2 = Book("Book 2", "Author 2")
+book3 = Book("Book 3", "Author 3")
+book4 = Book("Book 4", "Author 4")
+book5 = Book("Book 5", "Author 5")
+book6 = Book("Book 6", "Author 6")
+book7 = Book("Book 7", "Author 7")
+book8 = Book("Book 8", "Author 8")
+book9 = Book("Book 9", "Author 9")
+book10 = Book("Book 10", "Author 10")
 
-        // Create book objects
-        Book book1 = new Book("Book 1", "Author 1");
-        Book book2 = new Book("Book 2", "Author 2");
-        Book book3 = new Book("Book 3", "Author 3");
+stack.push(book1)
+stack.push(book2)
+stack.push(book3)
+stack.push(book4)
+stack.push(book5)
+stack.push(book6)
+stack.push(book7)
+stack.push(book8)
+stack.push(book9)
+stack.push(book10)
 
-        // Push books onto the stack
-        stack.push(book1);
-        stack.push(book2);
-        stack.push(book3);
 
-        // Pop a book from the stack
-        Book poppedBook = stack.pop();
-
-        // Peek the top book in the stack
-        Book topBook = stack.peek();
-    }
-}
+stack.walk_stack()
