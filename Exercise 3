@@ -1,0 +1,81 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Patient {
+    private String name;
+    private int age;
+    private String ailment;
+
+    public Patient(String name, int age, String ailment) {
+        this.name = name;
+        this.age = age;
+        this.ailment = ailment;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getAilment() {
+        return ailment;
+    }
+}
+
+public class PatientQueue {
+    private Queue<Patient> queue;
+
+    public PatientQueue() {
+        queue = new LinkedList<>();
+    }
+
+    public void enqueue(Patient patient) {
+        queue.add(patient);
+    }
+
+    public Patient dequeue() {
+        if (isEmpty()) {
+            return null;
+        }
+        return queue.poll();
+    }
+
+    public boolean isEmpty() {
+        return queue.isEmpty();
+    }
+
+    public int size() {
+        return queue.size();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        
+        PatientQueue queue = new PatientQueue();
+
+        
+        Patient patient1 = new Patient("John Doe", 30, "Fever");
+        Patient patient2 = new Patient("Jane Smith", 45, "Headache");
+        Patient patient3 = new Patient("David Johnson", 50, "Sprained ankle");
+
+        queue.enqueue(patient1);
+        queue.enqueue(patient2);
+        queue.enqueue(patient3);
+
+        System.out.println("Queue size: " + queue.size());  // Output: 3
+
+        
+        Patient dequeuedPatient = queue.dequeue();
+        if (dequeuedPatient != null) {
+            System.out.println("Dequeued patient: " + dequeuedPatient.getName());  // Output: "John Doe"
+        } else {
+            System.out.println("Queue is empty");
+        }
+
+        System.out.println("Queue size: " + queue.size());  // Output: 2
+    }
+}
