@@ -1,0 +1,80 @@
+public class Book {
+    private String title;
+    private String author;
+
+    public Book(String title, String author) {
+        this.title = title;
+        this.author = author;
+    }
+
+    // Getters and setters for title and author
+}
+
+public class BookStack {
+    private Book[] stack;
+    private int top;
+    private int capacity;
+
+    public BookStack(int capacity) {
+        this.capacity = capacity;
+        this.stack = new Book[capacity];
+        this.top = -1;
+    }
+
+    public boolean isEmpty() {
+        return top == -1;
+    }
+
+    public boolean isFull() {
+        return top == capacity - 1;
+    }
+
+    public void push(Book book) {
+        if (isFull()) {
+            System.out.println("Stack is full. Cannot push book: " + book.getTitle());
+        } else {
+            stack[++top] = book;
+            System.out.println("Pushed book: " + book.getTitle());
+        }
+    }
+
+    public Book pop() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty. Cannot pop a book.");
+            return null;
+        } else {
+            Book poppedBook = stack[top--];
+            System.out.println("Popped book: " + poppedBook.getTitle());
+            return poppedBook;
+        }
+    }
+
+    public Book peek() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty. No book to peek.");
+            return null;
+        } else {
+            return stack[top];
+        }
+    }
+
+    public static void main(String[] args) {
+        BookStack stack = new BookStack(5);
+
+        // Create book objects
+        Book book1 = new Book("Book 1", "Author 1");
+        Book book2 = new Book("Book 2", "Author 2");
+        Book book3 = new Book("Book 3", "Author 3");
+
+        // Push books onto the stack
+        stack.push(book1);
+        stack.push(book2);
+        stack.push(book3);
+
+        // Pop a book from the stack
+        Book poppedBook = stack.pop();
+
+        // Peek the top book in the stack
+        Book topBook = stack.peek();
+    }
+}
