@@ -1,0 +1,53 @@
+import java.util.LinkedList;
+import java.util.List;
+
+public class Student {
+    private String name;
+    private int age;
+    private int grade;
+
+    public Student(String name, int age, int grade) {
+        this.name = name;
+        this.age = age;
+        this.grade = grade;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public int getGrade() {
+        return grade;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a linked list of students
+        List<Student> studentList = new LinkedList<>();
+
+        // Add students to the list
+        studentList.add(new Student("John", 18, 85));
+        studentList.add(new Student("Emma", 19, 92));
+        studentList.add(new Student("Michael", 20, 76));
+        studentList.add(new Student("Olivia", 19, 95));
+        studentList.add(new Student("William", 21, 81));
+
+        // Print all students
+        printStudents(studentList);
+    }
+
+    public static void printStudents(List<Student> students) {
+        System.out.println("All Students:");
+        for (Student student : students) {
+            System.out.println("Name: " + student.getName());
+            System.out.println("Age: " + student.getAge());
+            System.out.println("Grade: " + student.getGrade());
+            System.out.println();
+        }
+    }
+}
