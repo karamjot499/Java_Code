@@ -25,7 +25,7 @@ public class Song {
         return duration;
     }
 }
-
+-------------------------------------------------------------------------------------------------------------------------------------------
 public class Playlist {
     private List<Song> playlist;
 
@@ -78,7 +78,7 @@ public class Playlist {
         }
     }
 }
-
+---------------------------------------------------------------------------------------------------------------------------------------------
 public class Main {
     public static void main(String[] args) {
         Playlist playlist = new Playlist();
@@ -117,3 +117,34 @@ public class Main {
         playlist.printPlaylist();
     }
 }
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Output:-
+Original Playlist:
+Title: Song 1
+Artist: Artist 1
+Duration: 240 seconds
+
+Title: Song 2
+Artist: Artist 2
+Duration: 180 seconds
+
+Title: Song 3
+Artist: Artist 3
+Duration: 320 seconds
+
+Removed Song from the Beginning:
+Title: Song 1
+Artist: Artist 1
+Duration: 240 seconds
+
+Removed Song from the End:
+Title: Song 3
+Artist: Artist 3
+Duration: 320 seconds
+
+Shuffled Playlist:
+Title: Song 2
+Artist: Artist 2
+Duration: 180 seconds
