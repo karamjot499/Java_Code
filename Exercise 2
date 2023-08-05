@@ -17,7 +17,7 @@ public class WebPage {
         return timestamp;
     }
 }
-
+--------------------------------------------------------------------------------------------------------------------------------------------
 public class WebPageStack {
     private Stack<WebPage> stack;
 
@@ -47,7 +47,7 @@ public class WebPageStack {
         return stack.isEmpty();
     }
 }
-
+----------------------------------------------------------------------------------------------------------------------------------
 public class Main {
     public static void main(String[] args) {
         // Create a stack of web pages
@@ -84,3 +84,16 @@ public class Main {
         System.out.println("Is stack empty? " + webPageStack.isEmpty());  // Output: false
     }
 }
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Output:-
+Most Recent Web Page:
+URL: https://www.example3.com
+Timestamp: 2021-07-03 16:20:00
+
+Removed Web Page:
+URL: https://www.example3.com
+Timestamp: 2021-07-03 16:20:00
+
+Is stack empty? false
