@@ -21,7 +21,7 @@ public class Book {
         return publicationYear;
     }
 }
-
+----------------------------------------------------------------------------------------------------
 public class BookLinkedList {
     private Node head;
     private Node tail;
@@ -117,7 +117,7 @@ public class BookLinkedList {
         System.out.println();
     }
 }
-
+---------------------------------------------------------------------------------------------------------------
 public class Main {
     public static void main(String[] args) {
         BookLinkedList bookList = new BookLinkedList();
@@ -158,3 +158,91 @@ public class Main {
         bookList.printListReverse();
     }
 }
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Output:-
+List of Books:
+Title: Book 9
+Author: Author 9
+Publication Year: 2013
+
+Title: Book 6
+Author: Author 6
+Publication Year: 2016
+
+Title: Book 3
+Author: Author 3
+Publication Year: 2020
+
+Title: Book 1
+Author: Author 1
+Publication Year: 2021
+
+Title: Book 2
+Author: Author 2
+Publication Year: 2019
+
+Title: Book 4
+Author: Author 4
+Publication Year: 2018
+
+Title: Book 5
+Author: Author 5
+Publication Year: 2017
+
+Title: Book 7
+Author: Author 7
+Publication Year: 2015
+
+Title: Book 8
+Author: Author 8
+Publication Year: 2014
+
+Title: Book 10
+Author: Author 10
+Publication Year: 2012
+
+Removed Book from the Beginning:
+Title: Book 9
+Author: Author 9
+Publication Year: 2013
+
+Removed Book from the End:
+Title: Book 10
+Author: Author 10
+Publication Year: 2012
+
+List of Books in Reverse Order:
+Title: Book 8
+Author: Author 8
+Publication Year: 2014
+
+Title: Book 7
+Author: Author 7
+Publication Year: 2015
+
+Title: Book 5
+Author: Author 5
+Publication Year: 2017
+
+Title: Book 4
+Author: Author 4
+Publication Year: 2018
+
+Title: Book 2
+Author: Author 2
+Publication Year: 2019
+
+Title: Book 1
+Author: Author 1
+Publication Year: 2021
+
+Title: Book 3
+Author: Author 3
+Publication Year: 2020
+
+Title: Book 6
+Author: Author 6
+Publication Year: 2016
+
