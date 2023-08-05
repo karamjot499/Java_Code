@@ -24,7 +24,7 @@ public class Order {
         return size;
     }
 }
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 public class OrderQueue {
     private Queue<Order> queue;
 
@@ -54,7 +54,7 @@ public class OrderQueue {
         return queue.isEmpty();
     }
 }
-
+----------------------------------------------------------------------------------------------------------------------------------------------
 public class Main {
     public static void main(String[] args) {
         // Create a queue of customer orders
@@ -93,3 +93,18 @@ public class Main {
         System.out.println("Is queue empty? " + orderQueue.isEmpty());  // Output: false
     }
 }
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+OutPut:-
+Next Order:
+Customer Name: John
+Drink Type: Cappuccino
+Size: Medium
+
+Removed Order:
+Customer Name: John
+Drink Type: Cappuccino
+Size: Medium
+
+Is queue empty? false
