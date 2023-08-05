@@ -17,7 +17,7 @@ public class Action {
         return parameters;
     }
 }
-
+------------------------------------------------------------------------------------------------------------------------------------------------------
 public class DrawingApp {
     private Stack<Action> undoStack;
     private Stack<Action> redoStack;
@@ -50,7 +50,7 @@ public class DrawingApp {
         return null;
     }
 }
-
+----------------------------------------------------------------------------------------------------------------------------------------------
 public class Main {
     public static void main(String[] args) {
         DrawingApp drawingApp = new DrawingApp();
@@ -83,3 +83,14 @@ public class Main {
         }
     }
 }
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Output:-
+Most Recent Action:
+Type: resize
+Parameters: Shape: Triangle, Scale: 1.5
+
+Most Recent Action:
+Type: resize
+Parameters: Shape: Triangle, Scale: 1.5
